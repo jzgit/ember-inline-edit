@@ -40,11 +40,11 @@ export default Component.extend({
   didInsertElement () {
     this._handleClick = this._handleClick.bind(this)
 
-    $(document).on('click', this._handleClick)
+    this.$().on('click', this._handleClick)
   },
 
   willDestroyElement () {
-    $(document).off('click', this._handleClick)
+    this.$().off('click', this._handleClick)
   },
 
   _handleClick (e) {
